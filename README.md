@@ -1,2 +1,2 @@
-# we-custom-tag-validateVatId
+# we:ifValidateVatId
 CMS webEdition Custom Tag for validation VatIds
