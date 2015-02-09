@@ -4,13 +4,14 @@
  * @since       webEdition 6.4.0
  * @version     1.0
  * @category    webEdition
- * @param       array $attribs possible values are: from, name, reference, shopname
+ * @param       array $attribs possible values are: from, namefrom, reference, shopname
  * @return      bool
+ * @TODO        handle different error types (e.g. 'Not allowed literals', 'Invalid Vat ID', 'Webservice unaviable')
  */
 function we_tag_ifValidateVatId($attribs)
 {
 
-    if (($foo = attributFehltError($attribs, array('name' => false, 'from' => false), __FUNCTION__))) {
+    if (($foo = attributFehltError($attribs, array('namefrom' => false, 'from' => false), __FUNCTION__))) {
         print($foo);
         return false;
     }
@@ -21,7 +22,7 @@ function we_tag_ifValidateVatId($attribs)
     }
 
     /** @var string $name */
-    $name = weTag_getAttribute('name', $attribs, '', we_base_request::STRING);
+    $name = weTag_getAttribute('namefrom', $attribs, '', we_base_request::STRING);
 
     /** @var string $from */
     $from = weTag_getAttribute('from', $attribs, '', we_base_request::STRING);
@@ -47,7 +48,8 @@ function we_tag_ifValidateVatId($attribs)
                 print($foo);
                 return false;
             }
-            $atts = removeAttribs($attribs, array('from'));
+            $atts = removeAttribs($attribs, array('from', 'namefrom'));
+            $atts['name'] = $name;
             $atts['type'] = 'print';
             $vatId = we_tag('shopField', $atts);
             break;
@@ -60,7 +62,10 @@ function we_tag_ifValidateVatId($attribs)
     /** @var array $matches */
     $matches = array();
 
-    /** @var string|bool $vatId */
+    /**
+     * first of all we make a syntax check
+     * @var string|bool $vatId
+     */
     $vatId = (!empty($vatId) && preg_match('/^([A-Z]{2})([A-Za-z0-9\+\*\.]{2,12})$/', trim($vatId), $matches)) ? $matches[0] : false;
 
     if (!$vatId) {
@@ -90,22 +95,23 @@ function we_tag_ifValidateVatId($attribs)
 
             return $response->valid;
 
-            /**
-             * TODO handle different error messages
-             * if ($response->valid == true) { // VAT-ID is valid
-             *
-             * } else { // VAT-ID is NOT valid
-             *
-             * }
-             */
-
         } catch (SoapFault $e) {
-            t_e('warning', 'we:ifValidateVatId', $e->faultstring);
-            return false;
+            switch($e->faultstring){
+                default:
+                case 'INVALID_INPUT': //The provided CountryCode is invalid or the VAT number is empty
+                    t_e('warning', 'we:ifValidateVatId', $e->faultstring);
+                    return false;
+                case 'SERVICE_UNAVAILABLE': //The SOAP service is unavailable, try again later
+                case 'MS_UNAVAILABLE': //The Member State service is unavailable, try again later or with another Member State
+                case 'TIMEOUT': //The Member State service could not be reached in time, try again later or with another Member State
+                case 'SERVER_BUSY': //The service cannot process your request. Try again later.
+                    t_e('warning', 'we:ifValidateVatId', $e->faultstring);
+                    return true;//because syntax check was OK
+            }
         }
     } else {
         // Connection to host not possible, europe.eu down?
-        t_e('warning', 'we:ifValidateVatId', 'Connection to host not possible: ' . $webservice);
-        return false;
+        t_e('warning', 'we:ifValidateVatId', 'Connection to host: ' . $webservice . ' not possible, but syntax check was OK');
+        return true;//because syntax check was OK
     }
 }
