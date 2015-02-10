@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f9ecc24-7f8c-4c8c-ba54-9004f62e670a" name="Default" comment="added webEdition Tag we:ifValidateVatId" />
+    <list default="true" id="1f9ecc24-7f8c-4c8c-ba54-9004f62e670a" name="Default" comment="added webEdition Tag we:ifNotValidateVatId">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webEdition/we/include/we_tags/custom_tags/we_tag_ifNotValidateVatId.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="ifValidateVatId.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -25,14 +29,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="443">
-              <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+            <state vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="165">
+              <caret line="4" column="140" selection-start-line="4" selection-start-column="140" selection-end-line="4" selection-end-column="140" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="we_tag_ifValidateVatId.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webEdition/we/include/we_tags/custom_tags/we_tag_ifValidateVatId.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.541667" vertical-offset="1385" max-vertical-offset="1830">
+              <caret line="114" column="49" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="we_tag_ifNotValidateVatId.inc.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webEdition/we/include/we_tags/custom_tags/we_tag_ifNotValidateVatId.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.40268457" vertical-offset="0" max-vertical-offset="447">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="we_tag_ifValidateVatId.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webEdition/we/include/weTagWizard/we_tags/custom_tags/we_tag_ifValidateVatId.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="420">
+              <caret line="5" column="74" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -52,16 +86,18 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/webEdition/we/include/we_tags/custom_tags/we_tag_ifValidateVatId.php" />
+        <option value="$PROJECT_DIR$/webEdition/we/include/we_tags/custom_tags/we_tag_ifValidateVatId.inc.php" />
+        <option value="$PROJECT_DIR$/webEdition/we/include/weTagWizard/we_tags/custom_tags/we_tag_ifValidateVatId.inc.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/webEdition/we/include/we_tags/custom_tags/we_tag_ifNotValidateVatId.inc.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="332" />
-    <option name="y" value="85" />
+    <option name="y" value="23" />
     <option name="width" value="1287" />
-    <option name="height" value="839" />
+    <option name="height" value="835" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -105,6 +141,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ifValidateVatId" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ifValidateVatId" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ifValidateVatId" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webEdition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="we" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weTagWizard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="we_tags" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom_tags" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -189,23 +259,47 @@
       <option name="project" value="LOCAL" />
       <updated>1423422988250</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added Tag wizard file">
+      <created>1423522584083</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1423522584083</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added error handling by webservice">
+      <created>1423522617793</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1423522617793</updated>
+    </task>
+    <task id="LOCAL-00004" summary="new description">
+      <created>1423522887449</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1423522887449</updated>
+    </task>
+    <task id="LOCAL-00005" summary="removed double http://">
+      <created>1423522951465</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1423522951465</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="332" y="85" width="1287" height="839" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1287" height="835" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32839838" sideWeight="0.49959838" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24979919" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24979919" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32931727" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32839838" sideWeight="0.5004016" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -235,17 +329,22 @@
     </option>
     <MESSAGE value="change project description" />
     <MESSAGE value="added webEdition Tag we:ifValidateVatId" />
-    <option name="LAST_COMMIT_MESSAGE" value="added webEdition Tag we:ifValidateVatId" />
+    <MESSAGE value="added Tag wizard file" />
+    <MESSAGE value="added error handling by webservice" />
+    <MESSAGE value="new description" />
+    <MESSAGE value="removed double http://" />
+    <MESSAGE value="added webEdition Tag we:ifNotValidateVatId" />
+    <option name="LAST_COMMIT_MESSAGE" value="added webEdition Tag we:ifNotValidateVatId" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webEdition/we/include/we_tags/custom_tags/we_tag_ifValidateVatId.php">
+    <entry file="file://$PROJECT_DIR$/webEdition/we/include/weTagWizard/we_tags/custom_tags/we_tag_ifValidateVatId.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30066815" vertical-offset="0" max-vertical-offset="1740">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="31" />
+        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="420">
+          <caret line="5" column="74" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="74" />
           <folding />
         </state>
       </provider>
@@ -255,8 +354,24 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="689">
-          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+        <state vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="165">
+          <caret line="4" column="140" selection-start-line="4" selection-start-column="140" selection-end-line="4" selection-end-column="140" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webEdition/we/include/we_tags/custom_tags/we_tag_ifValidateVatId.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.541667" vertical-offset="1385" max-vertical-offset="1830">
+          <caret line="114" column="49" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webEdition/we/include/we_tags/custom_tags/we_tag_ifNotValidateVatId.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40268457" vertical-offset="0" max-vertical-offset="447">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding />
         </state>
       </provider>
