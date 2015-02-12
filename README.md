@@ -13,7 +13,7 @@ Installation
 Usage
 ---
 
-Use the webEdition Tags <we:ifValidateVatId> or <we:ifNotValidateVatId> within your webEdition Templates for validating sales tax identification numbers given by any frontend forumlar of your website.
+Use the webEdition Tags <we:ifValidateVatId> or <we:ifNotValidateVatId> within your webEdition Templates for validating sales tax identification numbers given by any frontend formular of your website.
  
 You also could use this tag with AJAX jQuery validation functions or engine like jQuery.validationEngine.
 
