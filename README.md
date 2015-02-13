@@ -1,4 +1,4 @@
-# we:ifValidateVatId
+# we:ifValidateVatId v1.0
 
 Summary
 ---
