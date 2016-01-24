@@ -1,8 +1,8 @@
 <?php
 /**
  * @author      Andreas Witt <witt@andreas-witt.net>
- * @since       webEdition 6.4.0
- * @version     1.0
+ * @since       webEdition 6.3.9
+ * @version     1.1
  * @category    webEdition
  * @param       array $attribs possible values are: from, namefrom, reference, shopname
  * @return      bool
@@ -22,12 +22,16 @@ function we_tag_ifValidateVatId($attribs)
     }
 
     /** @var string $name */
-    $name = weTag_getAttribute('namefrom', $attribs, '', we_base_request::STRING);
+    $name = (defined(WE_VERSION) && floatval(WE_VERSION)>= '6.4') ? 
+    	weTag_getAttribute('namefrom', $attribs, '', we_base_request::STRING) : //since WE 6.4
+    	weTag_getAttribute('namefrom', $attribs); //up to WE 6.3.9
 
     /** @var string $from */
-    $from = weTag_getAttribute('from', $attribs, '', we_base_request::STRING);
+	$from = (defined(WE_VERSION) && floatval(WE_VERSION)>= '6.4') ? 
+    	weTag_getAttribute('from', $attribs, '', we_base_request::STRING) : //since WE 6.4
+    	weTag_getAttribute('from', $attribs); //up to WE 6.3.9
 
-    switch ($from) {
+    switch($from){
         case 'global':
             $vatId = isset($GLOBALS[$name]) ? getArrayValue($GLOBALS, null, $name) : '';
             break;
@@ -66,10 +70,11 @@ function we_tag_ifValidateVatId($attribs)
      * first of all we make a syntax check
      * @var string|bool $vatId
      */
+    
     $vatId = (!empty($vatId) && preg_match('/^([A-Z]{2})([A-Za-z0-9\+\*\.]{2,12})$/', trim($vatId), $matches)) ? $matches[0] : false;
 
     if (!$vatId) {
-        t_e('warning', 'we:ifValidateVatId', 'Not allowed literals within given VatId');
+        t_e('warning', 'we:ifValidateVatId', 'Missing or not allowed literals within given VatId');
         return false;
     }
 
@@ -79,7 +84,7 @@ function we_tag_ifValidateVatId($attribs)
     /** @var object $soapClient */
     $soapClient = new SoapClient($webservice);
 
-    if ($soapClient) {
+    if($soapClient) {
 
         /** @var string $isoCountryCode */
         $isoCountryCode = $matches[1];
