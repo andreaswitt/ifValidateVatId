@@ -1,8 +1,9 @@
-# we:ifValidateVatId v1.0
+# we:ifValidateVatId v1.1
 
 Summary
 ---
 CMS webEdition (http://www.webedition.org) Custom Tag for validating sales tax identification numbers
+Sinde webEdition 6.3.9
 
 Installation
 ---
