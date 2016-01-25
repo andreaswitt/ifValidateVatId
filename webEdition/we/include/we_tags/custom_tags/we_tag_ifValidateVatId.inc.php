@@ -22,12 +22,12 @@ function we_tag_ifValidateVatId($attribs)
     }
 
     /** @var string $name */
-    $name = (defined(WE_VERSION) && floatval(WE_VERSION)>= '6.4') ? 
+    $name = (defined(WE_VERSION) && version_compare(WE_VERSION,"6.3.9",">")) ? 
     	weTag_getAttribute('namefrom', $attribs, '', we_base_request::STRING) : //since WE 6.4
     	weTag_getAttribute('namefrom', $attribs); //up to WE 6.3.9
 
     /** @var string $from */
-	$from = (defined(WE_VERSION) && floatval(WE_VERSION)>= '6.4') ? 
+	$from = (defined(WE_VERSION) && version_compare(WE_VERSION,"6.3.9",">")) ? 
     	weTag_getAttribute('from', $attribs, '', we_base_request::STRING) : //since WE 6.4
     	weTag_getAttribute('from', $attribs); //up to WE 6.3.9
 
@@ -48,6 +48,10 @@ function we_tag_ifValidateVatId($attribs)
             $vatId = isset($_SESSION[$name]) ? getArrayValue($_SESSION, null, $name) : '';
             break;
         case 'shopfield':
+        	/**
+        	* @var string reference: possbile values 'cart' or 'article'
+        	* @var string shopname
+        	*/
             if (($foo = attributFehltError($attribs, array('reference' => false, 'shopname' => false), __FUNCTION__))) {
                 print($foo);
                 return false;
